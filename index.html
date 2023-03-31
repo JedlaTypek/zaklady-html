@@ -7,10 +7,35 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <!-- Zde připojte soubor reset.css -->
-    <link rel="stylesheet" href="css/reset.css">
-    <!-- Zde připojte soubor style.css -->
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  li {
+    list-style-position: inside;
+  }
+  ol#browsers li{
+    color: blue;
+    list-style-type:decimal ;
+  }
+  .navbar li{
+    list-style-type: none;
+  }
+  ul li {
+    list-style-type:square;
+  }
+  ol.vnoreny li {
+    list-style-type: upper-roman;
+  }
+  ol.vnoreny ol li {
+    list-style-type: upper-alpha;
+    color: green;
+    margin-left: 30px;
+  }
+  ol.vnoreny ol ol li {
+    list-style-type: lower-alpha;
+    color: blue;
+  }
+</style>
   </head>
   <body>
     <div class="navbar">
@@ -49,37 +74,37 @@
           <h4>Příklady inline elementů</h4>
           <!-- 2. Doplňte vhodné značky -->
           <p>
-            Bold text (tučný text), italic text (kurzíva),
-            important text (důležité pojmy),
-            emphasized text (zdůrazněný text),
-            smaller text (zmenšený text),
-            marked or highlighted text (označený, zvýrazněný text),
-            inserted text (vložený text),
-            deleted text (smazaný text), dolní index:
-            H2SO4, horní index: 210 = 1024,
-            proměnné: Einstein wrote: E = mc2, 
-            klávesové zkratky: CTRL + ALT + DEL nebo
-            odkazy na menu: Soubor | Otevřít....
+            <b>Bold text (tučný text),</b> <i>italic text (kurzíva),</i>
+            <strong>important text (důležité pojmy),</strong>>
+            <em>emphasized text (zdůrazněný text),</em>
+            <small>smaller text (zmenšený text),</small>
+            <mark>marked or highlighted text (označený, zvýrazněný text),</mark>>
+            <ins>inserted text (vložený text),</ins>>
+            <del>deleted text (smazaný text),</del> dolní index:
+            H<sub>2</sub>SO<sub>4</sub>>, horní index: 210 = 1024,
+            proměnné: <var>Einstein wrote: E = mc<sup>2</sup>>,</var>
+            klávesové zkratky: <kbd>CTRL + ALT + DEL</kbd> nebo
+            odkazy na menu: <kbd>Soubor | Otevřít....</kbd>>
           </p>
           <p>
-            Knihu <citát>Nesnesitelná lehkost bytí</citát> napsal slavný český
+            Knihu <cite>Nesnesitelná lehkost bytí</cite> napsal slavný český
             spisovatel Milan Kundera po své emigraci do Francie.
           </p>
           <!-- ********************** -->
           <!-- 3. Doplňte atributy zkratek -->
           <p>
-            <abbr title="">W3C</abbr> je mezinárodní
+            <abbr title="World Wide Web Consorcium">W3C</abbr> je mezinárodní
             konsorcium, jehož členové společně s veřejností vyvíjejí webové
-            standardy pro <abbr title="">WWW</abbr>. Cílem
+            standardy pro <abbr title="World Wide Web">WWW</abbr>. Cílem
             konsorcia je
             <q
               >Rozvíjet World Wide Web do jeho plného potenciálu vývojem
               protokolů a směrnic, které zajistí dlouhodobý růst webu</q
             >. Konsorciu předsedá jeho zakladatel
             <strong>Tim Berners-Lee</strong>, tvůrce služby WWW a primární autor
-            specifikací <abbr title="">URL</abbr>,
-            <abbr title="">HTTP</abbr> a
-            <abbr title="">HTML</abbr> – základních
+            specifikací <abbr title="Uniform Recource Locator">URL</abbr>,
+            <abbr title="HyperText Transfer Protocol">HTTP</abbr> a
+            <abbr title="HyperText Markup Language">HTML</abbr> – základních
             pilířů webu.
           </p>
           <!-- ********************** -->
@@ -125,26 +150,26 @@
           <h4>Programové kódy a výstupy</h4>
           <p>Příklad výpisu předformátovaného programového kódu:</p>
       <!-- 4. Zadejte správné značky -->    
-      <předformátovaný_kód>
-			<programový_kód>
-			var i = 0;
-			while (i &lt; 10){
-				document.writeln('&lt;p&gt;'+ i + '&lt;/p&gt;');
-				i++;
-			}
-			</programový_kód>
-			</předformátovaný_kód>
-          <p>Příklad výpisu výstupu z konzole:</p>
-      <předformátovaný_kód>
-			<samp>
-			Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25) [MSC v.1900 64 bit (AMD64)] on win32
-			Type "help", "copyright", "credits" or "license" for more information.
-			>>> 5 ** 2
-			25
-			>>>
+ <pre>
+<code>
+		var i = 0;
+		while (i &lt; 10){
+		document.writeln('&lt;p&gt;'+ i + '&lt;/p&gt;');
+		i++;
+		}
+</code>
+</pre>
+<p>Příklad výpisu výstupu z konzole:</p>
+<pre>
+<samp>
+  	Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25) [MSC v.1900 64 bit (AMD64)] on win32
+	  Type "help", "copyright", "credits" or "license" for more information.
+		>>> 5 ** 2
+		25
+		>>>
 			</samp>
-			</předformátovaný_kód>
-      <!-- ********************** -->
+			</pre>
+      <!-- done -->
           <p>
             Mezi blokové elementy můžeme zařadit i seznamy, tabulky a formuláře.
           </p>
@@ -153,14 +178,61 @@
         <section id="seznamy">
           <h2>Tvorba seznamů</h2>
           <h3>Uspořádaný seznam (ordered list)</h3>
-            <p>Google Chrome</p>
-            <p>Internet Explorer</p>
-            <p>Mozilla Firefox</p>
+          <ol id="browsers">
+            <li>Google Chrome</li>
+            <li>Internet Exlilorer</li>
+            <li>Mozilla Firefox</li>
+            </ol>
           <h3>Neuspořádaný seznam (unordered list)</h3>
-            <p>IP adresy (např. IPv4: 192.168.23.1, IPv6: )</p>
-            <p>DNS adresy (např. strojka.opava.cz)</p>
-            <p>URL adresy (např. http://moodle.sspu-opava.cz:81/course/view.php?id=95)</p>
+          <ul>
+            <li>IP adresy (např. IPv4: 192.168.23.1, IPv6: )</li>
+            <li>DNS adresy (např. strojka.opava.cz)</li>
+            <li>URL adresy (např. http://moodle.sspu-opava.cz:81/course/view.php?id=95)</li>
+          </ul>
           <h3>Vnořený seznam</h3>
+          <ol class="vnoreny">
+            <li>Hardware
+              <ol>
+                <li>Základní jenotka
+                  <ol>
+                    <li>procesor (<abbr title="Centra Processing Unit">CPU</abbr>)</li>
+                    <li> paměť (<abbr title="Random Access Memory">RAM</abbr>)</li>
+                    <li>pevný disk (<abbr title="Hard disk drive">HDD</abbr>)</li>
+                  </ol>
+                </li>
+                <li>Vstupní zařízení
+                  <ol>
+                    <li>Klávesnice</li>
+                    <li>Myš</li>
+                  </ol>
+                </li>
+                <li>Výstupní zařízení
+                  <ol>
+                    <li>Monitor</li>
+                    <li>Tiskárna</li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+            <li>Software
+              <ol>
+                <li>Základní progamové vybavení
+                  <ol>
+                    <li>operační systém</li>
+                    <li>ovladač</li>
+                    <li>firmware</li>
+                  </ol>
+                </li>
+                <li>Aplikace
+                  <ol>
+                    <li>textový editor</li>
+                    <li>prohlížeč</li>
+                    <li>antivirový program</li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+          </ol>
               Hardware
               Základní jednotka
               procesor (<abbr title="">CPU</abbr>)
@@ -182,24 +254,24 @@
               prohlížeč
               antivirový program
           <h3>Popisný seznam (description list)</h3>
-          <popisný_seznam>
-            <termín>Internet Society (ISOC)</termín>
-            <vysvětlivka>
-              Mezinárodní organizace pro globální koordinaci a kooperaci v rámci
+          <dl>
+            <dt>Internet Society (ISOC)</dt>
+            <dd>
+              -Mezinárodní organizace pro globální koordinaci a kooperaci v rámci
               internetu.
-            </vysvětlivka>
-            <termín>World Wide Web Consortium (W3C)</termín>
-            <vysvětlivka>
-              Mezinárodní konsorcium, jehož členové společně s veřejností
+            </dd>
+            <dt>World Wide Web Consortium (W3C)</dt>
+            <dd>
+              -Mezinárodní konsorcium, jehož členové společně s veřejností
               vyvíjejí webové standardy pro službu WWW.
-            </vysvětlivka>
-            <termín>Internet Assigned Numbers Authority (IANA)</termín>
-            <vysvětlivka>
-              Organizace, která dohlíží celosvětově na přidělování IP adres,
+            </dd>
+            <dt>Internet Assigned Numbers Authority (IANA)</dt>
+            <dd>
+              -Organizace, která dohlíží celosvětově na přidělování IP adres,
               správu kořenových zón DNS, definování typů medií pro MIME a další
               náležitosti internetových protokolů.
-            </vysvětlivka>
-          </popisný_seznam>
+            </dd>
+          </dl>
         <!-- ********************** -->   
         </section>
         <section id="tabulky">
@@ -210,7 +282,57 @@
             sloučené buňky, které přesahují přes více sloupců i řádků.
           </p>
         <!-- 6. Vytvořte tabulku podle vzoru --> 
+        <table border="1">
+          <caption>Studijní obory na SŠPU Opava</caption>
+          <thead>
+            <tr>
+              <th rowspan="2">Název oboru</th>
+              <th rowspan="2">Zkratka oboru</th>
+              <th rowspan="2">Počet tříd</th>
+              <th colspan="3">Počty žáků</th>
+            </tr>
+            <tr>
+              <th>Chlapci</th>
+              <th>Dívky</th>
+              <th>Celkem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Informační technologie</td>
+              <td>IT</td>
+              <td>4</td>
+              <td>110</td>
+              <td>10</td>
+              <td>120</td>
+            </tr>
+            <tr>
+              <td>Strojírenství</td>
+              <td>SV</td>
+              <td>8</td>
+              <td>170</td>
+              <td>0</td>
+              <td>170</td>
+            </tr>
+            <tr>
+              <td>Umělecké obory</td>
+              <td>UO</td>
+              <td>4</td>
+              <td>30</td>
+              <td>70</td>
+              <td>100</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">Celkové údaje</td>
+              <td>16 tříd</td>
+              <td colspan="3">390 žáků</td>
+            </tr>
+          </tfoot>
+        </table>
         <!-- ******************************* -->  
+        
         </section>
 
         <section id="clanky">
@@ -252,48 +374,36 @@
           <h3>Obrázky</h3>
           <div class="images">
             <figure>
-              <img src="img/bill-gates.jpg" alt="Bill Gates">
-              <figcaption>Bill Gates</figcaption>
+              <img src="img/bill-gates.jpg" alt="Bill Gates.">
+              <figcaption>Billa Gatese</figcaption>
             </figure>
             <figure>
-              <img src="img/tim-berners-lee.jpg" alt="Tim Berners-Lee">
-              <figcaption>Tim Berners-Lee</figcaption>
+              <img src="img/tim-berners-lee.jpg" alt="Tim Berners Lee.">
+              <figcaption>Tim Berners Lee.</figcaption>
             </figure>
             <figure>
-              <img src="img/steve-jobs.jpg" alt="Steve Jobs">
-              <figcaption>Steve Jobs</figcaption>
+              <img src="img/steve-jobs.jpg" alt="Steve Jobs.">
+              <figcaption>Stev Jobs</figcaption>
             </figure>
           </div>
           <hr class="cistic">
           <h3>Multimediální soubory</h3>
           <div class="multimedia">
-          </div>
-          <video autoplay controls muted>
-            <source src="multimedia/apple-1984.mp4" type="video/mp4">
-            <source src="multimedia/apple-1984.ogg" type="video/ogg">
-            Tento prohlížeč nepodporuje žádný z dostupných formátů.
+            <video autoplay muted controls width="500">
+          <source src="/multimedia/apple-1984.mp4" type="video/mp4"> 
+          <source src="/multimedia/apple-1984.ogg" type="video/ogg">
           </video>
           <hr>
-          <audio controls>
-            <source src="multimedia/sverepi-sakali.mp3" type="audio/mp3">
-            <source src="multimedia/sverepi-sakali.ogg" type="audio/ogg">
-            Tento prohlížeč nepodporuje žádný z uvedených formátů.
-          </audio>
-          <hr>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/LMWwImDX3ks"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+            <audio controls>
+          <source src="/multimedia/sverepi-sakali.mp3" type="audio/mp3"> 
+          <source src="/multimedia/sverepi-sakali.ogg" type="audio/ogg">
+            </audio>
+          </div>
+          <!-- ********************************************* --> 
           <hr class="cistic" />
           <h3>Vložená stránka (iframe)</h3>
-          <!-- 8. Zjistěte, k čemu se používá značka iframe  -->           
-          <!-- ********************************************* --> 
-        </section>
+          <!-- 8. Zjistěte, k čemu se používá značka iframe  -->   
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/iWhlrkfJrCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        </section>
       </main>
       <aside>
         <section id="odkazy">
