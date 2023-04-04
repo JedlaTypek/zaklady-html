@@ -63,6 +63,13 @@ p {
     text-align: center;    
 }
 
+dt{
+    font-weight: bold;
+}
+dd{
+    margin-left: 30px;
+}
+
 /* Záhlaví */
 header {
     padding: 2em 0;
@@ -135,6 +142,61 @@ aside {
 
 footer {
     clear: both;
+    text-align: center;
+}
+/* Tabulka */
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+table caption{
+    background-color: #faebd6;
+    padding: 10px;
+    font-size: 20px;
+    color:#646874;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+thead th{
+    font-weight: bold;
+    color:white;
+    vertical-align: middle;
+}
+tbody{
+    text-align: right;
+}
+tbody tr :first-child{
+    font-weight: bold;
+    text-align: left;
+}
+tbody tr :last-child{
+    font-weight: bold;
+}
+tfoot{
+    font-weight: bold;
+    color:red;
+    background-color: #dddddd;
+    text-align: right;
+}
+tfoot tr td{
+    padding: 10px;
+}
+tfoot tr :first-child{
+    color:black;
+    text-align: center;
+}
+.pocty-head{
+    background-color: #483c8d;
+}
+.center{
+    text-align: center;
+}
+
+thead{
+    background-color: #6395ec;
 }
 
 /* Obrázky */
@@ -154,12 +216,12 @@ footer {
 }
 
 /* Audio */
-#audio {
+audio {
+    width: 200px;
     position: absolute;
     top: 300px;
     right: 20px;
 }
-
 /* Responzivní design */
 @media only screen and (max-width: 600px) {   
     #obsah {
